@@ -2,7 +2,10 @@
  Arduino library for **SpaceCoffee CanSat**
 
 ## Downloading
-Download the zip with code and unpack it to libraries folder. In Windows: `Documents/Arduino/libraries`
+Download the zip with code and unpack it to libraries folder. 
+On Windows: `C:/Users/{username}/Documents/Arduino/libraries`
+On MacOS: `/Users/{username}/Documents/Arduino/libraries`
+On Linux: `/home/{username}/Arduino/libraries`
 
 ## Configuration
 ```cpp
