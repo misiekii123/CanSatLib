@@ -28,3 +28,10 @@ CanSat myCanSat(sd_reader_cs_pin);
 ```cpp
 myCanSat.saveData(file_name, text_to_save);
 ```
+
+## Changelog
+### v1.0
+<ul>
+<li>Added SD card support</li>
+<li>Created Readme file</li>
+</ul>
