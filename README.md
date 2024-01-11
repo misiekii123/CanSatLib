@@ -1,5 +1,6 @@
 # CanSat
- Arduino library for **SpaceCoffee CanSat**.
+ Arduino library for **CanSat**. \
+ *by SpaceCoffee*
 
 ## Downloading
 Download the zip with code and unpack it to libraries folder.\
@@ -14,7 +15,10 @@ You have to install also these libraries: \
 `SD` \
 You can download them from libraries manager in Arduino IDE.
 ```cpp
-#include "CanSat.h"
+#include <CanSat.h>
+#include <Wire.h>
+#include <SPI.h>
+#include <SD.h>
 
 #define sd_reader_cs_pin 4
 ```
