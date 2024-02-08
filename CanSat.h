@@ -11,7 +11,7 @@ public:
     Adafruit_BMP280 bmp280;
     CanSat(int cs_pin);
     void saveData(const char* file_name, char* text_to_save);
-    void connectBMP(const unsigned char* adress);
+    void checkSensors(const unsigned char* BMPadress);
     char* readTemperature();
     char* readPressure();
     char* readAltitude();

@@ -15,12 +15,12 @@ void CanSat::saveData(const char* file_name, char* text_to_save) {
     }
 }
 
-void CanSat::connectBMP(const unsigned char* adress = 0x76){
-    if (!bmp280.begin(adress)) {  
+void CanSat::checkSensors(const unsigned char* BMPadress = 0x76){
+    if (!bmp280.begin(BMPadress)) {  
         Serial.println("BMP280 connect ERROR!");
         while (1);
     }
-    else {
+    else if(bmp280.begin(BMPadress)){
         Serial.println("BMP280: OK");
     }
 }
@@ -30,7 +30,7 @@ char* CanSat::readTemperature() {
     
     // Convert float to char array (string)
     static char buffer[20]; // buffer size
-    dtostrf(temperature, 6, 2, buffer); // value, width, precision, buffer
+    dtostrf(temperature, 6, 1, buffer); // value, width, precision, buffer
     
     return buffer;
 }
@@ -40,7 +40,7 @@ char* CanSat::readPressure() {
     
     // Convert float to char array (string)
     static char buffer[20]; // buffer size
-    dtostrf(pressure, 6, 2, buffer); // value, width, precision, buffer
+    dtostrf(pressure, 6, 1, buffer); // value, width, precision, buffer
     
     return buffer;
 }
@@ -50,7 +50,7 @@ char* CanSat::readAltitude() {
     
     // Convert float to char array (string)
     static char buffer[20]; // buffer size
-    dtostrf(altitude, 6, 2, buffer); // value, width, precision, buffer
+    dtostrf(altitude, 6, 1, buffer); // value, width, precision, buffer
     
     return buffer;
 }
