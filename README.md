@@ -47,7 +47,7 @@ char* alt = myCanSat.readAltitude();
 ### v1.2
 <ul>
 <li>Fixed mistakes in the README file
-<li>Changed connectBMP() to checkSensors()
+<li>Changed connectBMP() to checkSensors() - this function will be universal for all sensors
 </ul>
 
 ### v1.1
